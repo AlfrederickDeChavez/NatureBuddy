@@ -1,0 +1,7 @@
+{
+  "name": "NatureBuddy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
