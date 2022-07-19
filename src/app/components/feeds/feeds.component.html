@@ -1,0 +1,38 @@
+<div class="feeds-container">
+  <div class="post-container" *ngFor="let post of posts">
+
+    <div class="post-author">
+      <div class="post-header">
+        <div class="author-profile-pic"></div>
+        <div class="author-details">
+          <h4>{{post.author}}</h4>
+          <p>20 minutes ago</p>
+        </div>
+      </div>
+      <ion-icon name="ellipsis-horizontal" class="more"></ion-icon>
+    </div>
+
+    <div class="caption-container">
+      <p class="post-caption">{{post.caption}}</p>
+    </div>
+
+    <div class="img-container">
+
+    </div>
+
+    <div class="reactions-container">
+      <div class="reactions-button">
+        <ion-icon name="heart" (click)="addLike(post.id)" *ngIf="post.isLiked"></ion-icon>
+        <ion-icon name="heart-outline" (click)="addLike(post.id)" *ngIf="!post.isLiked"></ion-icon>
+        <ion-icon name="chatbox-outline"></ion-icon>
+        <button class="btn-donate" (click)="donate()">
+          <ion-icon name="leaf"></ion-icon>
+          <p>Donate</p>
+        </button>
+      </div>
+      <span class="post-likes">{{post.likes}} likes</span>
+    </div>
+
+  </div>
+  
+</div>

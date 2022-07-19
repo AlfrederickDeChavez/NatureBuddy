@@ -1,0 +1,53 @@
+ion-header {
+    width: 100%;
+    height: fit-content;
+    padding: 8px 20px;
+    background-color: #534C59;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.nature {
+    font-weight: 600;
+    font-size: 26px;
+    color: #09C005;
+}
+
+.buddy {
+    font-weight: 600;
+    font-size: 26px;
+    color: #0FDDDD;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 3px solid blue;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: gray;
+}
+
+.profile-pic::before {
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(4, 197, 4);
+    bottom: 0;
+    right: 0;
+}
+
+ion-icon {
+    font-size: 30px;
+    color: white;
+}
