@@ -1,7 +1,18 @@
 <div class="project-form-container">
   <div class="header">
       <p>Share Your Actions</p>
+      <h4 (click)="postContent()" class="post-btn">POST</h4>
   </div>
-  <button (click)="cancel()">Cancel</button>
+
+  <div class="post-form">
+    <input type="textarea" placeholder="Write a caption..." wrap="hard" row="10" [(ngModel)]="post.caption" name="caption">
+    <button class="add-post-btn">
+      <ion-icon name="camera-outline"></ion-icon>
+      <ion-text>ADD PHOTO</ion-text>
+    </button>
+  </div>
+  <button class="close-btn" (click)="cancel()">
+    <ion-icon name="close"></ion-icon>
+  </button>
 </div>
 

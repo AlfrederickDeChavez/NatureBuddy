@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { POSTS } from 'src/app/models/mock-posts';
 import { Post } from 'src/app/models/Posts.model';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-feeds',
@@ -12,7 +13,7 @@ export class FeedsComponent implements OnInit {
   posts: Post[] = POSTS
   now: Date;
 
-  constructor() { }
+  constructor(private alertctrl: AlertController) { }
 
   ngOnInit() { 
     this.now = new Date()
@@ -33,8 +34,38 @@ export class FeedsComponent implements OnInit {
     
   }
 
-  donate() {
-    console.log('Donate Button Works ... ')
+  async donate() {
+    let alert = await this.alertctrl.create({
+      
+      inputs: [
+        {
+          name: 'amount',
+          placeholder: 'Enter amount',
+          type: 'number'
+        },
+      
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        },
+        {
+          text: 'Confirm',
+          handler: data => {
+
+            if (!data.amount) {
+              return false
+            }
+            
+            console.log(data.amount)
+          }
+        }
+      ]
+
+    });
+
+    await alert.present()
   }
 
 }

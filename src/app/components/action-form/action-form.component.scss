@@ -7,7 +7,14 @@
 .header {
     background: #534C59;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 10px;
 }
+
+
 
 .header p {
     font-size: 18px;
@@ -15,12 +22,67 @@
     margin: 0;
 }
 
-button {
+.header .post-btn {
+    color: #0fdddd;
+}
+
+.close-btn {
     outline: none;
-    padding: none;
-    color: white;
-    border: 2px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 70px;
+    left: calc(50% - 25px);
+    box-shadow: 2px 0 10px 2px rgba(26, 25, 25, 0.8);
+}
+
+.close-btn ion-icon {
+    font-size: 30px;
+}
+
+.post-form {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-form input {
+    padding: 15px 15px 70px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #534c5941;
+    margin-bottom: 15px;
+}
+
+.post-form button {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 3px;
     background: none;
+    border: 2px solid #534C59;
+}
+
+.post-form button ion-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.post-form button ion-text {
+    font-size: 16px;
+    font-weight: 500;
 }

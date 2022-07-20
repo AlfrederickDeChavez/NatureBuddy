@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
 
 const routes: Routes = [
   {
@@ -20,8 +19,7 @@ const routes: Routes = [
       {
         path: 'community',
         loadChildren: () => import('../community/community.module').then( m => m.CommunityPageModule)
-      },
-      
+      },  
     ]
   },
   {

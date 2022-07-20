@@ -12,6 +12,9 @@ export class ProjectFormComponent implements OnInit {
 
   public project = {
     title: '',
+    location: '',
+    date: '',
+    description: '',
   }
   
   ngOnInit() {}
@@ -22,6 +25,8 @@ export class ProjectFormComponent implements OnInit {
 
   save() {
     console.log(this.project)
-    this.modalCtrl.dismiss()
+    setTimeout(() => {
+      this.modalCtrl.dismiss()
+    }, 500)
   }
 }

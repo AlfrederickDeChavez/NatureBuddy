@@ -1,0 +1,49 @@
+
+.login-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #312B2B;
+}
+
+
+.nature {
+    font-weight: 600;
+    font-size: 34px;
+    color: #09C005;
+}
+
+.buddy {
+    font-weight: 600;
+    font-size: 34px;
+    color: #0FDDDD;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+ion-button {
+    --background: #09c005;
+}
+
+ion-input {
+    --background: #534c599c;
+    border-radius: 10px;
+    --padding-start: 20px;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+
+img {
+    width: 100px;
+    margin-bottom: 40px;
+    
+}

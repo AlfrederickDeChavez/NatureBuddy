@@ -1,0 +1,72 @@
+.community-page-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+
+}
+
+.header {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #534C59;
+
+}
+
+.header h4 {
+    text-align: center;
+    color: #09C005;
+}
+
+.tab-navigation-container {
+    display: flex;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+
+}
+
+button {
+    border: 1px solid #0fdddd;
+    width: 33.33333%;
+    height: 30px;
+    background: none;
+    --color-activated: #0fdddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.people-tab {
+    margin: 0 0.5px;
+}
+
+.people-tab:hover {
+    border: 1px solid #0fdddd;
+    background: #0fdddd;
+}
+
+
+.project-tab {
+    border-radius: 10px 0 0 10px;
+}
+
+.project-tab:hover {
+    border: 1px solid #0fdddd;
+    background: #0fdddd;
+}
+.pending-tab {
+    border-radius: 0 10px 10px 0;
+}
+
+.pending-tab:hover {
+    border: 1px solid #0fdddd;
+    background: #0fdddd;
+}
+
+button ion-icon {
+    margin-right: 7px;
+    font-size: 16px;
+    color: white;
+}

@@ -122,3 +122,21 @@
     margin-left: 20px;
     color: white;
 }
+
+.no-post {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.no-post h3 {
+    color: #534C59;
+}
+
+.no-post ion-icon {
+    font-size: 50px;
+    color: #534C59;
+}

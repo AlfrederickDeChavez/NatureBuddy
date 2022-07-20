@@ -1,1 +1,23 @@
-<h1>Community Screen</h1>
+<div class="header">
+        <h4>COMMUNITY</h4>
+    </div>
+<div class="community-page-content">
+    <div class="tab-navigation-container">
+        <button class="tabs project-tab" (click)="toggleProjects()">
+            <ion-icon name="folder-outline"></ion-icon>
+            <ion-text>Project</ion-text>
+        </button>
+        <button class="tabs people-tab" (click)="togglePeople()">
+            <ion-icon name="people-outline"></ion-icon>
+            <ion-text>People</ion-text>
+        </button>
+        <button class="tabs pending-tab" (click)="togglePending()">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <ion-text>Pending</ion-text>
+        </button>
+    </div>
+
+    <app-projects *ngIf="showProject">Projects</app-projects>
+    <h3 *ngIf="showPeople">People</h3>
+    <h3 *ngIf="showPending">Pending</h3>
+</div>
