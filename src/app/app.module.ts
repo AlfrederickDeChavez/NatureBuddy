@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
 import { ActionFormComponent } from './components/action-form/action-form.component';
 
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
 @NgModule({
   declarations: [
@@ -17,7 +20,7 @@ import { ActionFormComponent } from './components/action-form/action-form.compon
     ProjectFormComponent,
     ActionFormComponent, 
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, SocketIoModule.forRoot(config)],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

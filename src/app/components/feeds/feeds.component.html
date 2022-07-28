@@ -10,18 +10,20 @@
       <div class="post-header">
         <div class="author-profile-pic"></div>
         <div class="author-details">
-          <h4>{{post.author}}</h4>
-          <p>20 minutes ago</p>
+          <h4>@{{post.author}}</h4>
+          <p>{{post.date}}</p>
         </div>
       </div>
-      <ion-icon name="ellipsis-horizontal" class="more"></ion-icon>
+      <ion-icon name="ellipsis-horizontal" class="more" (click)="showMore()"></ion-icon>
     </div>
+
+    
 
     <div class="caption-container">
       <p class="post-caption">{{post.caption}}</p>
     </div>
 
-    <div class="img-container">
+    <div class="img-container" *ngIf="post.image !== ''">
 
     </div>
 

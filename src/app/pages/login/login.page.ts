@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-login',
@@ -8,14 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class LoginPage implements OnInit {
 
   public username: string = '';
-  constructor() { }
+  constructor(private userService: UserService, private socket: Socket) { }
 
   ngOnInit() {
   }
 
   login() {
-    console.log(this.username)
-    this.username = '';
+    this.socket.emit('login', this.username)
+    this.socket.on('user-joined', data => {
+      this.userService.setMyUserInformation(data)
+    })
   } 
 
 }

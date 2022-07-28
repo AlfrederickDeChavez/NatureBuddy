@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { POSTS } from 'src/app/models/mock-posts';
 import { Post } from 'src/app/models/Posts.model';
 import { AlertController } from '@ionic/angular';
+import { FeedService } from 'src/app/services/feed.service';
 
 @Component({
   selector: 'app-feeds',
@@ -10,29 +10,27 @@ import { AlertController } from '@ionic/angular';
 })
 export class FeedsComponent implements OnInit {
 
-  posts: Post[] = POSTS
-  now: Date;
+  posts: Post[];
+  now: Date; 
 
-  constructor(private alertctrl: AlertController) { }
+  constructor(private alertctrl: AlertController, private feedService: FeedService) { }
 
   ngOnInit() { 
-    this.now = new Date()
-  }
+    this.now = new Date(Date.now())
+    this.feedService.getPosts().subscribe(posts => {
+      this.posts = posts
+    })
+  } 
 
   addLike(postId) {
-    let likedClick: boolean = this.posts[postId - 1].isLiked;
-    if(this.posts[postId - 1].isLiked) {
-      if (likedClick) {
-        this.posts[postId - 1].likes = this.posts[postId - 1].likes - 1
-      }
-      this.posts[postId - 1].isLiked = !this.posts[postId - 1].isLiked
-      return
-    } else {
-        this.posts[postId - 1].likes = this.posts[postId - 1].likes + 1
-        this.posts[postId - 1].isLiked = !this.posts[postId - 1].isLiked 
-    }
-    
+    console.log('Post Liked')
   }
+
+  showMore() {
+    console.log(this.posts)
+  }
+
+  
 
   async donate() {
     let alert = await this.alertctrl.create({

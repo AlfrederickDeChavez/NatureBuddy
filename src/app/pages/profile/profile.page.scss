@@ -8,11 +8,47 @@
     padding: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     background-color: #534C59;
 }
 
 .header h4 {
     text-align: center;
     color: #09C005;
+}
+
+.profile-info {
+    width: calc(100% - 40px);
+    height: 20%;
+    background-color: #534c59;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.profile-description {
+    margin-left: 15px;
+}
+
+.profile-description h3 {
+    margin: 0;
+    color: #0fdddd;
+}
+
+.profile-description button {
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid #0fdddd;
+    color: #0fdddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    background: none;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-form',
@@ -8,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProjectFormComponent implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private projectService: ProjectService) { }
 
   public project = {
     title: '',
@@ -24,7 +25,13 @@ export class ProjectFormComponent implements OnInit {
   }
 
   save() {
-    console.log(this.project)
+    this.projectService.addProject(this.project)
+    this.project = {
+      title: '',
+      location: '',
+      date: '',
+      description: '',
+    }
     setTimeout(() => {
       this.modalCtrl.dismiss()
     }, 500)

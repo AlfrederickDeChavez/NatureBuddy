@@ -8,6 +8,8 @@ import { CommunityPageRoutingModule } from './community-routing.module';
 
 import { CommunityPage } from './community.page';
 import { ProjectsComponent } from 'src/app/components/projects/projects.component';
+import { PeopleComponent } from 'src/app/components/people/people.component';
+import { PendingComponent } from 'src/app/components/pending/pending.component';
 
 @NgModule({
   imports: [
@@ -16,6 +18,6 @@ import { ProjectsComponent } from 'src/app/components/projects/projects.componen
     IonicModule,
     CommunityPageRoutingModule,
   ],
-  declarations: [CommunityPage, ProjectsComponent]
+  declarations: [CommunityPage, ProjectsComponent, PeopleComponent, PendingComponent]
 })
 export class CommunityPageModule {}
