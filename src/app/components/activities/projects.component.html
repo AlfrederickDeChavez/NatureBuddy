@@ -1,0 +1,48 @@
+<div class="projects-content">
+  <div class="myproject-header">
+    <ion-text>My Projects</ion-text>
+  </div>
+  <div class="myproject-list">
+    <p class="no-project" *ngIf="communityProjects.length == 0">No projects to show.</p>
+    <div class="myproject" *ngFor="let project of communityProjects; index as i" >
+      <ion-text class="title">{{project.title}}</ion-text>
+      <div class="buttons">
+        <button (click)="viewProjectDetails()">View Details</button> 
+        <button>Members</button> 
+      </div>
+
+
+      <div class="project-details-container" *ngIf="showDetails">
+        <h2>Project Details</h2>
+        <div class="project-details-box">
+          <div class="project-detail">
+            <p>Title:  <span>{{project.title}}</span></p>
+          </div>
+          <div class="project-detail">
+            <p>Location:  <span>{{project.location}}</span></p>
+          </div>
+          <div class="project-detail"> 
+            <p>Date:  <span>{{project.date}}</span></p>
+          </div>
+          <div class="project-detail">
+            <p>Description:  <span>{{project.description}}</span></p>
+          </div>
+        </div>
+        <button (click)="closeProjectDetails()">Close</button>
+      </div>
+    </div> 
+  </div>
+  <div class="communityproject-header">
+    <ion-text>Community Projects</ion-text>
+  </div>
+  <p class="no-comm-project">No projects to show.</p>
+  <div class="communityproject-list" *ngIf="false">
+    <div class="communityproject" >
+      <ion-text class="title">Zero Garbage 2022</ion-text>
+      <div class="buttons">
+        <button>View Details</button>
+        <button>Join</button>
+      </div>
+    </div>
+  </div>
+</div>

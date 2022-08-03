@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Projects } from 'src/app/models/Projects.model';
 import { ProjectService } from 'src/app/services/project.service';
 
@@ -9,12 +9,20 @@ import { ProjectService } from 'src/app/services/project.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  myprojects: Projects[] = []
-  communityProjects: Projects[] = []
-  constructor(private projectService: ProjectService) { }
+  showDetails: boolean = false;
+  @Input() communityProjects: Projects[];
+
+  constructor() { } 
 
   ngOnInit() {
-    this.myprojects = this.projectService.getProjects()
   }
 
+  viewProjectDetails() {
+    this.showDetails = true
+  }
+
+  closeProjectDetails() {
+    this.showDetails = false
+  }
+  
 }

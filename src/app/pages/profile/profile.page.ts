@@ -9,12 +9,25 @@ import { UserService } from 'src/app/services/user.service';
 export class ProfilePage implements OnInit {
 
   username: string = ''
+  showFollowers: boolean = true;
+  showFollowing: boolean = false
+
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.userService.getMyUserInformation().subscribe(username => {
       this.username = username
     })
+  }
+
+  toggleFollowers() {
+    this.showFollowers = true
+    this.showFollowing = false
+  }
+
+  toggleFollowing() {
+    this.showFollowing = true
+    this.showFollowers = false
   }
 
 }

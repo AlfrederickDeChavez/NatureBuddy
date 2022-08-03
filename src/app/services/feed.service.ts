@@ -18,12 +18,13 @@ export class FeedService {
   //Returns posts created.
   getPosts(){
     this.socket.on('receive-post', post => {
-      this.posts.push(post)
+      this.posts.unshift(post)
     })
     
     return new Observable<Post[]>(subscriber => {
       subscriber.next(this.posts)
     })
+    
   }
 
   //Sending the post to the server

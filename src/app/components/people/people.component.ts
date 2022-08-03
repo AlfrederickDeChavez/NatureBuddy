@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-people',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeopleComponent implements OnInit {
 
-  constructor() { }
+  people: any[] = [
+    {},
+    {},
+    {}
+  ]
+  constructor(private socket: Socket) { }
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    this.socket.on('message', message => {
+      console.log(message)
+    })
+  }
+ 
 }

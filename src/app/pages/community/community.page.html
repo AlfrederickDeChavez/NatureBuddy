@@ -5,7 +5,7 @@
     <div class="tab-navigation-container">
         <button class="tabs project-tab" (click)="toggleProjects()">
             <ion-icon name="folder-outline"></ion-icon>
-            <ion-text>Project</ion-text>
+            <ion-text>Project</ion-text> 
         </button>
         <button class="tabs people-tab" (click)="togglePeople()">
             <ion-icon name="people-outline"></ion-icon>
@@ -17,7 +17,7 @@
         </button>
     </div>
 
-    <app-projects *ngIf="showProject">Projects</app-projects>
+    <app-projects *ngIf="showProject" [communityProjects]="communityProjects">Projects</app-projects>
     <app-people *ngIf="showPeople">People</app-people>
     <app-pending *ngIf="showPending">Pending</app-pending>
 </div>

@@ -14,10 +14,9 @@ export class ActionFormComponent implements OnInit {
   constructor(private modalCtrl: ModalController, private feedService: FeedService, private socket: Socket, private userService: UserService) { }
 
   public post = {
-    id: 1,
     author: '',
     caption: '', 
-    date: new Date(Date.now()),
+    date: new Date(Date.now()).getHours() > 12 ? new Date(Date.now()).getHours() - 12 + ':' + new Date(Date.now()).getMinutes() + ' pm': new Date(Date.now()).getHours() + ':' + new Date(Date.now()).getMinutes() + ' am',
     image: '',
     likes: 0,
     comment: '',
@@ -37,7 +36,10 @@ export class ActionFormComponent implements OnInit {
   postContent() {
     this.feedService.addPost(this.post)
     this.modalCtrl.dismiss()
+  }
 
+  addPhoto() {
+    console.log('Photgxcfhhfg.')
   }
 
 }

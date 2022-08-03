@@ -1,0 +1,46 @@
+.pending-content {
+    width: 100%;
+    min-height: 500px;
+    margin-top: 15px;
+}
+
+.joined-projects-header {
+    width: 100%;
+    padding: 3px 20px;
+    background-color: #534C59;
+}
+
+.joined-projects-header p {
+    margin: 0;
+}
+
+.project {
+    width: 100%;
+    border-bottom: 1px solid #0fdddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.project-details p {
+    margin: 0;
+}
+
+.project-title {
+    font-size: 13px;
+}
+
+.project-author {
+    font-size: 10px;
+    color: #0fdddd;
+}
+
+.project button {
+    padding: 0 10px;
+    background: none;
+    border: 1px solid #0fdddd;
+    border-radius: 10px;
+    font-size: 8px;
+    height: 28px;
+}

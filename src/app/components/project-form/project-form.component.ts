@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Projects } from 'src/app/models/Projects.model';
 import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class ProjectFormComponent implements OnInit {
 
   constructor(private modalCtrl: ModalController, private projectService: ProjectService) { }
 
-  public project = {
+  public project: Projects = {
     title: '',
     location: '',
     date: '',
@@ -37,3 +38,4 @@ export class ProjectFormComponent implements OnInit {
     }, 500)
   }
 }
+ 

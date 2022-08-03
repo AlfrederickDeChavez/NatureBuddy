@@ -11,5 +11,22 @@
             <button>Edit Profile</button>
         </div>
     </div>
+
+    <div class="follow-tabs-container">
+        <button class="tabs followers-tab" (click)="toggleFollowers()">
+            <ion-text>Followers</ion-text>
+        </button>
+        <button class="tabs following-tab" (click)="toggleFollowing()">
+            <ion-text>Following</ion-text>
+        </button>
+    </div>
+
+    <div class="followers-content" *ngIf="showFollowers">
+        <h4>No Followers.</h4>
+    </div>
+
+    <div class="following-content" *ngIf="showFollowing">
+        <h4>You don't follow anyone yet.</h4>
+    </div>
 </div>
- 
+  

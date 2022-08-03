@@ -3,10 +3,10 @@
       <p>Share Your Actions</p>
       <h4 (click)="postContent()" class="post-btn">POST</h4>
   </div>
-
+ 
   <div class="post-form">
     <input type="textarea" placeholder="Write a caption..." wrap="hard" row="10" [(ngModel)]="post.caption" name="caption">
-    <button class="add-post-btn">
+    <button class="add-post-btn" (click)="addPhoto()">
       <ion-icon name="camera-outline"></ion-icon>
       <ion-text>ADD PHOTO</ion-text>
     </button>

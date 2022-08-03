@@ -19,7 +19,8 @@ export class FeedsComponent implements OnInit {
     this.now = new Date(Date.now())
     this.feedService.getPosts().subscribe(posts => {
       this.posts = posts
-    })
+    }).unsubscribe()
+
   } 
 
   addLike(postId) {
@@ -56,7 +57,7 @@ export class FeedsComponent implements OnInit {
               return false
             }
             
-            console.log(data.amount)
+            console.log(`You donated ${data.amount} pesos successfully.`)
           }
         }
       ]
