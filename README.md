@@ -1,4 +1,8 @@
-# NatureBuddy
+# NatureBuddy  
+
+
+<img src="./src/assets/NatureBuddyLogo.png" width=200/>
+
 ## A Social Feed Platform for Encouraging Community Collaboration for Improving the Current Environmental Situation 
 
 ### Project Description
